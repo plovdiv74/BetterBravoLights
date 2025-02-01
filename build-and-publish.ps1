@@ -6,8 +6,11 @@ if ($null -eq $env:VCTargetsPath) {
 	$env:VCTargetsPath = 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\'
 }
 
+cd BravoLights
 dotnet publish -p:PublishProfile=FolderProfile -p:Configuration=Release
-$path = Resolve-Path "BravoLights\bin\Release\net5.0-windows\publish\BetterBravoLights.exe"
+cd ..
+
+$path = Resolve-Path "BravoLights\bin\Release\net9.0-windows\publish\BetterBravoLights.exe"
 
 if (Test-Path -Path BetterBravoLights) {
 	Remove-Item -Path BetterBravoLights -Recurse
@@ -15,7 +18,7 @@ if (Test-Path -Path BetterBravoLights) {
 
 mkdir BetterBravoLights
 mkdir BetterBravoLights\Program
-Copy-Item -Path "BravoLights\bin\Release\net5.0-windows\publish\*" -Destination "BetterBravoLights\Program" -Recurse
+Copy-Item -Path "BravoLights\bin\Release\net9.0-windows\publish\*" -Destination "BetterBravoLights\Program" -Recurse
 Copy-Item -Path "BravoLights\install.bat" -Destination "BetterBravoLights"
 Copy-Item -Path "BravoLights\uninstall.bat" -Destination "BetterBravoLights"
 Copy-Item -Path "BravoLights\LICENSES.md" -Destination "BetterBravoLights"

@@ -45,7 +45,7 @@ namespace BravoLights.UI
             {
                 try
                 {
-                    // v0.6.0
+                    // v0.8.2 <- RoystonS released this May 25, 2022
                     var releaseName = releaseEntry.GetProperty("name").GetString();
                     var versionString = releaseName[1..];
                     var version = new Version(versionString);
@@ -54,8 +54,10 @@ namespace BravoLights.UI
                         latestVersion = version;
                     }
                 }
-                catch
+                catch (Exception ex)
                 {
+                    // Log the exception or handle it as needed
+                    Console.WriteLine($"Error parsing release entry: {ex.Message}");
                 }
             }
 

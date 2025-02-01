@@ -51,7 +51,7 @@ namespace BravoLights.Installation
                     return Application.StartupPath;
                 }
 
-                return Path.Join(Application.StartupPath, "..", "..", "..", "..", "BravoLights", "bin", "Debug", "net5.0-windows");
+                return Path.Join(Application.StartupPath, "..", "..", "..", "..", "BravoLights", "bin", "Debug", "net9.0-windows");
             }
         }
 

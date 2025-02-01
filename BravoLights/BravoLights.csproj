@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>net9.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
-    <Version>0.9.0</Version>
+    <Version>0.9.1</Version>
     <Authors>Royston Shufflebotham &lt;royston@shufflebotham.org&gt;</Authors>
     <Product>Better Bravo Lights</Product>
-    <Copyright>(C) 2021-2022 Royston Shufflebotham &lt;royston@shufflebotham.org&gt;</Copyright>
+    <Copyright>(C) 2021-2025 Royston Shufflebotham &lt;royston@shufflebotham.org&gt;</Copyright>
     <PackageId>BetterBravoLights</PackageId>
     <AssemblyName>BetterBravoLights</AssemblyName>
   </PropertyGroup>
@@ -18,20 +18,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
-    <PackageReference Include="NLog" Version="4.7.13" />
-    <PackageReference Include="sly" Version="2.8.0" />
-    <PackageReference Include="System.Text.Encoding.CodePages" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
+    <PackageReference Include="NLog" Version="5.3.4" />
+    <PackageReference Include="sly" Version="3.5.2" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="9.0.1" />
   </ItemGroup>
   
   <ItemGroup>
     <Reference Include="Microsoft.FlightSimulator.SimConnect">
-      <HintPath>C:\MSFS SDK\SimConnect SDK\lib\managed\Microsoft.FlightSimulator.SimConnect.dll</HintPath>
+      <HintPath>$(MSFS_SDK)\SimConnect SDK\lib\managed\Microsoft.FlightSimulator.SimConnect.dll</HintPath>
     </Reference>
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="C:\MSFS SDK\SimConnect SDK\lib\SimConnect.dll" Link="SimConnect.dll">
+    <None Include="$(MSFS_SDK)\SimConnect SDK\lib\SimConnect.dll" Link="SimConnect.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

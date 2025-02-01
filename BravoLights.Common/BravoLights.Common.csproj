@@ -3,14 +3,14 @@
   <PropertyGroup>
     <Authors>Royston Shufflebotham &lt;royston@shufflebotham.org&gt;</Authors>
     <Product>Better Bravo Lights</Product>
-    <Copyright>(C) 2021-2022 Royston Shufflebotham &lt;royston@shufflebotham.org&gt;</Copyright>
-    <TargetFramework>net5.0</TargetFramework>
+    <Copyright>(C) 2021-2025 Royston Shufflebotham &lt;royston@shufflebotham.org&gt;</Copyright>
+    <TargetFramework>net9.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="HidSharp" Version="2.1.0" />
-    <PackageReference Include="NLog" Version="4.7.13" />
-    <PackageReference Include="sly" Version="2.8.0" />
+    <PackageReference Include="NLog" Version="5.3.4" />
+    <PackageReference Include="sly" Version="3.5.2" />
   </ItemGroup>
 
 </Project>
